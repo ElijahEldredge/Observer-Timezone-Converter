@@ -50,7 +50,7 @@ public abstract class AbsTimeZoneObserver {
             secondsText = "" + seconds;
         }
 
-        z.setText("" + hours + ":" + minutesText + ":" + seconds + " " + timeZone);
+        z.setText("" + hours + ":" + minutesText + ":" + secondsText + " " + timeZone);
 
    }
 
