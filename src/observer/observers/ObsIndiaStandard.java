@@ -32,6 +32,11 @@ public class ObsIndiaStandard extends AbsTimeZoneObserver {
             hour += 1;
         }
 
+        if(hour > 23){
+            hour -= 24;
+        }
+
+
         DasCalendar.set(Calendar.HOUR_OF_DAY, hour);
         DasCalendar.set(Calendar.MINUTE, minute);
 
