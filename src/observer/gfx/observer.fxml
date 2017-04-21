@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="observer.controllers.ObserverController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="148.0" layoutY="25.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Enter Time in Eastern Standard Time (UTC -5) ">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtEstHours" alignment="CENTER_RIGHT" onKeyReleased="#notifyObservers" promptText="hours" text="7">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+                  <Label text=":">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEstMinutes" alignment="CENTER_RIGHT" onKeyReleased="#notifyObservers" promptText="minutes" text="25">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+                  <Label text=":">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEstSeconds" alignment="CENTER_RIGHT" onKeyReleased="#notifyObservers" promptText="seconds" text="00">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </HBox>
+            <GridPane hgap="5.0" vgap="5.0" VBox.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Pacific Standard Time (PST)">
+                           <font>
+                              <Font name="System Italic" size="20.0" />
+                           </font></Label>
+                        <Label fx:id="lblPacific">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label text="British Standard Time (BST)">
+                        <font>
+                           <Font name="System Italic" size="20.0" />
+                        </font></Label>
+                        <Label fx:id="lblBritish">
+
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Japan Standard (JST)">
+                           <font>
+                              <Font name="System Italic" size="20.0" />
+                           </font></Label>
+                        <Label fx:id="lblJapan">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="India Standard (IST)">
+                           <font>
+                              <Font name="System Italic" size="20.0" />
+                           </font></Label>
+                        <Label fx:id="lblIndia">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
